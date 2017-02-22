@@ -1,10 +1,10 @@
 # Site Settings
 title: Start Jekyll
-email: taniarascia@gmail.com
+email: apremrenu@gmail.com
 description: >
   A guide to getting started with Jekyll.
 baseurl: ""
-url: "http://localhost:4000"
+url: "www.contrib.andrew.cmu.edu/~apremren"
 twitter_username: taniarascia
 github_username:  taniarascia
 # Build Settings
