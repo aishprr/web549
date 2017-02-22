@@ -1,12 +1,12 @@
 # Site Settings
 title: Start Jekyll
-email: taniarascia@gmail.com
+email: apremrenu@gmail.com
 description: >
   A guide to getting started with Jekyll.
-baseurl: "/startjekyll"
-url: "http://taniarascia.github.io"
+baseurl: ""
+url: "www.contrib.andrew.cmu.edu/~apremren"
 twitter_username: taniarascia
-github_username:  taniarascia
+github_username:  aishprr
 # Build Settings
 sass:
   sass_dir: _sass
