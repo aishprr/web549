@@ -5,5 +5,5 @@
 - run make (or jekyll build)
 - sync with the www hosted directory on andrew machines / ECE 
 
-### [Used started code from!](https://taniarascia.com/make-a-static-website-with-jekyll)
+#### [Used starter code from here](https://taniarascia.com/make-a-static-website-with-jekyll)
 
