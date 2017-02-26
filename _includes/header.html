@@ -4,8 +4,9 @@
     <nav>
       <ul>
       <li class="special">
+        <li><a href=index.html>Home</a></li>
         {% for page in site.pages %} {% if page.title %}
-        <li><a href="{{base}}{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        <li><a href="{{base}}{{ page.url | prepend: site.baseurl }}".html>{{ page.title }}</a></li>
         {% endif %} {% endfor %}
       </li>
       </ul>

@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Contact
-permalink: /contact/
+title: Members
+permalink: members.html
 ---
 
 Contact content goes here.
