@@ -1,16 +1,16 @@
 {% include base.html %}
 <aside>
-	<div class="container">
-		<nav>
-			<ul>
-			<li class="special">
-				{% for page in site.pages %} {% if page.title %}
-				<li><a href="{{base}}{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
-				{% endif %} {% endfor %}
-			</li>
-			</ul>
-			</li>
-			</ul>
-		</nav>
-	</div>
+  <div class="container">
+    <nav>
+      <ul>
+      <li class="special">
+        {% for page in site.pages %} {% if page.title %}
+        <li><a href="{{base}}{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+        {% endif %} {% endfor %}
+      </li>
+      </ul>
+      </li>
+      </ul>
+    </nav>
+  </div>
 </aside>
