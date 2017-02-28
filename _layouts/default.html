@@ -7,12 +7,14 @@
   {% include header.html %}
 
   <!-- One -->
-  <section id="one" class="wrapper alt style4">
+  <section id="one" class="wrapper style1 special">
     <div class="inner">
-      <h2>Motivation</h2>
-      <p>From 1999 to 2008, the number of accidental overdoses that have lead to death quadrupled, and drug abusers can easily access prescription painkillers through friends or relatives with legitimate prescriptions. Since prescription drugs are inherently very addictive substances, self-dosing can be very dangerous and can lead to addiction or even death. Our solution is the automate the at-home drug consumption process to reduce the risk of mistaken dosage and unauthorized access to prescription drugs.</p>
-      <h2>Concept</h2>
-      <p>We will be making an automated pill dispenser with biometric access control. Our device will be able to verify a patient’s fingerprint and dispense medication based on a prescribed schedule, set by the authorized pharmacist or physician.</br></p>
+      <header>
+        <h2>Motivation</h2>
+        <p>From 1999 to 2008, the number of accidental overdoses that have lead to death quadrupled, and drug abusers can easily access prescription painkillers through friends or relatives with legitimate prescriptions. Since prescription drugs are inherently very addictive substances, self-dosing can be very dangerous and can lead to addiction or even death. Our solution is the automate the at-home drug consumption process to reduce the risk of mistaken dosage and unauthorized access to prescription drugs.</p>
+        <h2>Concept</h2>
+        <p>We will be making an automated pill dispenser with biometric access control. Our device will be able to verify a patient’s fingerprint and dispense medication based on a prescribed schedule, set by the authorized pharmacist or physician.</br></p>
+      </header>
     </div>
   </section>
   <!-- Three -->
@@ -60,7 +62,7 @@
 <!-- Two -->
   <section id="three" class="wrapper alt style2">
     <div class="inner">
-    <h2><center></br></br>Components</center></h2>
+    <h2><center></br>Components</center></h2>
     <section class="spotlight">
       <div class="image"><img src="images/rpi3.jpg" alt="" /></div><div class="content">
         <h2>Microcontroller</h2>
@@ -68,9 +70,22 @@
       </div>
     </section>
     <section class="spotlight">
-      <div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
+      <div class="image"><img src="images/fingerprint_again.jpg" alt="" /></div><div class="content">
         <h2>Fingerprint sensor</h2>
-        <p>A key component of our product is the authentication step that verifies that the person who is withdrawing the medication is the person for whom it is intended for. <br/> This prevents people from developing an addiction to medication that they should not be taking, as it does not allow them to even use it in the first place. <br/> To do this, we will use a JP2210 capacitive fingerprint sensor for biometric sensing. When adding a user to the device, the sensor will be used to collect information about the user’s fingerprint and it will then be transferred via SPI to the processor for storage. <br/> Similarly, after the device has been configured, when the user goes to withdraw their medication, they will use the sensor to authenticate themselves, and the sensor will collect information about the fingerprint and send it to the processor via SPI for verification.</p>
+        <p>A key component of our product is the authentication step that verifies that the person who is withdrawing the medication is the person for whom it is intended for. <br/> This prevents people from developing an addiction to medication that they should not be taking, as it does not allow them to even use it in the first place. <br/> To do this, we will use a EM401 capacitive fingerprint sensor for biometric sensing. When adding a user to the device, the sensor will be used to collect information about the user’s fingerprint and it will then be transferred via UART to the processor for storage. <br/> Similarly, after the device has been configured, when the user goes to withdraw their medication, they will use the sensor to authenticate themselves, and the sensor will collect information about the fingerprint and send it to the processor via UART for verification.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/reed_sensor.jpg" alt="" /></div><div class="content">
+        <h2>Door sensor</h2>
+        <p>One crucial element to providing access control is being able to sense whether the lid is open. This information can be used to automatically lock the lid when closed. Reed switches are commonly used to detect when a door or drawer is open, so a reed switch is appropriate here.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+        <h2>Augue eleifend aliquet<br />
+        sed condimentum</h2>
+        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
       </div>
     </section>
     <section class="spotlight">
@@ -81,80 +96,42 @@
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-        <h2>Bolting Solenoid</h2>
-        <p>In order to control access to the pills to prevent overdose, we will be using a solenoid that actuates a bolt to act as a locking mechanism. In choosing the solenoid, there is a tradeoff between how strongly the solenoid bolts and the amount of power it consumes. Since we are aiming to create a portable device, we will be operating this solenoid with a battery. The solenoid we chose is at this <a href= "https://www.adafruit.com/products/1512">link</a>. </br>
-        It has a slug that is normally active i.e. the solenoid is locked when unpowered and when powered, the slug is pulled back allowing the door to be opened, making it ideal for this case, since the door is locked most of the time. For safe operation, we will also use a IN4004 diode along with a power transistor (TIP102). This solenoid can be operated at 9V - 12V DC which makes it ideal to be powered with a battery. </p>
+        <h2>Augue eleifend aliquet<br />
+        sed condimentum</h2>
+        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-        <h2>Load sensor</h2>
-        <p>This sensor is present in order to test if a pill has been dispensed successfully by our system. It will also help us test is the user has taken the pill according to schedule, and prevent dispensing more pills if the user has not taken their previously scheduled medication.</p>
+        <h2>Door sensor</h2>
+        <p>One crucial element to providing access control is being able to sense whether the lid is open. This information can be used to automatically lock the lid when closed. Reed switches are commonly used to detect when a door or drawer is open, so a reed switch is appropriate here.</p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
-        <h2>Motor</h2>
+        <h2>Augue eleifend aliquet<br />
+        sed condimentum</h2>
         <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
       </div>
     </section>
     </div>
   </section>
 
-  <section id="four" class="main style1 special">
-    <div class="container">
-      <h2><center></br></br>Competition</center></h2>
-      <p>There are several other automated pill dispensers out there</p>
-      <div class="row 200%">
-        <div class="4u 20u$(medium)">
-          <h3>GMS Med-e-lert Automatic Pill Dispenser</h3>
-          <p>Words.</p>
-          <ul class="actions">
-            <li><a href="http://www.medelert.net/" class="button">More</a></li>
-          </ul>
-        </div>
-        <div class="4u 20u$(medium)">
-          <h3>MedMinder</h3>
-          <p>Words.</p>
-          <ul class="actions">
-            <li><a href="https://www.medminder.com/?gclid=CjwKEAiAuc_FBRD7_JCM3NSY92wSJABbVoxBKIwLX9Ime9vF-cmaSk_BsC20KuAzWd1y1rl_gmcR4BoCGKDw_wcB" class="button">More</a></li>
-          </ul>
-        </div>
-        <div class="4u$ 20u$(medium)">
-          <h3>Philips Automated Medication Dispensing Service</h3>
-          <p>Words.</p>
-          <ul class="actions">
-            <li><a href="https://www.lifeline.philips.com/health-solutions/health-mdp.html" class="button">More</a></li>
-          </ul>
-        </div>
-      </div>
-      <p>There are several other automated pill dispensers out there</br>However, these dispensers are geared towards the elderly, to remind patients to take their medication. Our product is geared towards a more secure storage and delivery system for prescription medication. We will have built in biometric access control, which alternatives either do not provide or provide at high cost.</p>
-    </div>
-  </section>
 
-  <section  id="five" class="wrapper alt style2">
-    <h2><center></br></br>Members</center></h2>
+
+  <!-- CTA -->
+  <section id="cta" class="wrapper style4">
     <div class="inner">
-      <section>
-        <h4>Aishwarya Prem Renu</h4>
-        <p>Words.</p>
-      </section>
-      <section>
-        <h4>Ashwin Raghavachari</h4>
-        <p>Words.</p>
-      </section>
-      <section>
-        <h4>Isaac Manjarres</h4>
-        <p>Words.</p>
-      </section>
-      <section>
-        <h4>Karthic Annamalai</h4>
-        <p>Words.</p>
-      </section>
+      <header>
+        <h2>Arcue ut vel commodo</h2>
+        <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+      </header>
+      <ul class="actions vertical">
+        <li><a href="#" class="button fit special">Activate</a></li>
+        <li><a href="#" class="button fit">Learn More</a></li>
+      </ul>
     </div>
   </section>
-
-
   {% include footer.html %}
   </div>
 </body>
