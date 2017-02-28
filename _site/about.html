@@ -37,60 +37,100 @@
   <div class="container">
     <nav>
       <ul>
-      <li class="special">
-        <li><a href=index.html>Home</a></li>
-         
-        <li><a href="./about.html".html>About</a></li>
-          
-        <li><a href="./members.html".html>Members</a></li>
-                   
-      </li>
-      </ul>
-      </li>
-      </ul>
+      <li>
+        <li><a href=index.html>Top</a></li>
+        <li><a href=index.html#one>Motivation</a></li>
+        <li><a href=index.html#two>Requirements</a></li>
+        <li><a href=index.html#three>Components</a></li>
+        <li><a href=index.html#four>Competition</a></li>
+        <li><a href=index.html#five>Members</a></li>
     </nav>
   </div>
 </aside>
 
-  <!-- Banner -->
-          <section id="banner">
-            <div class="inner">
-              <h2>Pill popper!</h2>
-              <p>Description!!!</p>
-            </div>
-            <a href="#one" class="more scrolly">Learn More</a>
-          </section>
+<!-- Banner -->
+<section id="banner">
+  <div class="inner">
+    <h2>Pill popper!</h2>
+    <p>Description!!!</p>
+  </div>
+  <a href="#one" class="more scrolly">Tell Me More!</a>
+</section>
+
+
   <!-- One -->
   <section id="one" class="wrapper style1 special">
     <div class="inner">
-      <header class="major">
-        <h2>Arcu aliquet vel lobortis ata nisl<br />
-        eget augue amet aliquet nisl cep donec</h2>
-        <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-        fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
+      <header>
+        <h2>Motivation</h2>
+        <p>From 1999 to 2008, the number of accidental overdoses that have lead to death quadrupled, and drug abusers can easily access prescription painkillers through friends or relatives with legitimate prescriptions. Since prescription drugs are inherently very addictive substances, self-dosing can be very dangerous and can lead to addiction or even death. Our solution is the automate the at-home drug consumption process to reduce the risk of mistaken dosage and unauthorized access to prescription drugs.</p>
+        <h2>Concept</h2>
+        <p>We will be making an automated pill dispenser with biometric access control. Our device will be able to verify a patient’s fingerprint and dispense medication based on a prescribed schedule, set by the authorized pharmacist or physician.</br></p>
       </header>
-      <ul class="icons major">
-        <li><span class="icon fa-diamond major style1"><span class="label">Lorem</span></span></li>
-        <li><span class="icon fa-heart-o major style2"><span class="label">Ipsum</span></span></li>
-        <li><span class="icon fa-code major style3"><span class="label">Dolor</span></span></li>
+    </div>
+  </section>
+  <!-- Three -->
+  <section id="two" class="wrapper style3 special">
+    <div class="inner">
+      <h2>Requirements</h2>
+      <ul class="features">
+        <li class="icon fa-paper-plane-o">
+          <h3>Portable and Compact</h3>
+          <p>The most important physical component of our project is a container capable of being loaded, storing, and dispensing pills. This container must be compact and portable, and easy to use since the target customers are either the elderly or those possibly suffering from an illness. This portability also allows for us to implement access control, which prevents the user from having access to excess medication, allowing only physicians / pharmacists to load and schedule dosages.</p>
+        </li>
+        <li class="icon fa-medkit">
+          <h3>Durable and Airtight</h3>
+          <p>With the goal of the project in mind, the device must be durable and protected against physical breakage. Since the device is going to be storing medication, it must also be safe for storing medication for extended periods of time, similar to the cases used for storing the medication without the automated dispensing facility.</p>
+        </li>
+        <li class="icon fa-user-md">
+          <h3>Physician Access Control</h3>
+          <p>In order to achieve preventing access to the user to take more than the prescribed medication, we aim to have an access control mechanism that allows only authorized individuals / organizations to load the container with the right pills, and set the schedule. This feature should be easily accessible via a user app, that can identify the device eadily. This user app will also only be distributed to such authorized entities, thereby preventing misuse.</p>
+        </li>
+        <li class="icon fa-user">
+          <h3>User Access Control</h3>
+          <p>Our device also secures the medication from individuals other than the user of the medication. For this, we intend to use biometric access control, which can also be setup using a User app. This app will allow the user to add their biometric markers to the device to restrict access.</p>
+        </li>
+        <li class="icon fa-calendar">
+          <h3>Physician Settings and Alerts</h3>
+          <p>Only the physician will be able to set the prescription schedule for the medication on the device. This will be through the same user app as user above. One of the possible extensions to our project is to alert physicians in case medication is missed by the user or if the secure container has been breached.</p>
+        </li>
+        <li class="icon fa-bell">
+          <h3>User Reminders</h3>
+          <p>The user will be reminded on their phones (paired with the deviece) when it is time for their medication. The device will also keep track of when the medication is nearing exhaustion, and alert the user to refill.</p>
+        </li>
+        <!--
+        <li class="icon fa-heart-o">
+          <h3>Aenean Primis</h3>
+          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+        </li>
+        <li class="icon fa-flag-o">
+          <h3>Tortor Ut</h3>
+          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
+        </li> -->
       </ul>
     </div>
   </section>
 
 <!-- Two -->
-  <section id="two" class="wrapper alt style2">
+  <section id="three" class="wrapper alt style2">
+    <div class="inner">
+    <h2><center></br>Components</center></h2>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
+        <h2>Microcontroller</h2>
+        <p>Our primary motivation when choosing a microcontroller was support for BLE (and possibly Wifi) and other standard communication protocols and an easily accessible development environment. For these reasons, we chose the Raspberry Pi 3 since it comes built in with BLE and 802.11n Wireless Support. </br> <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Link</a></p>
+      </div>
+    </section>
     <section class="spotlight">
       <div class="image"><img src="images/pic01.jpg" alt="" /></div><div class="content">
-        <h2>Magna primis lobortis<br />
-        sed ullamcorper</h2>
-        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        <h2>Fingerprint sensor</h2>
+        <p>A key component of our product is the authentication step that verifies that the person who is withdrawing the medication is the person for whom it is intended for. <br/> This prevents people from developing an addiction to medication that they should not be taking, as it does not allow them to even use it in the first place. <br/> To do this, we will use a JP2210 capacitive fingerprint sensor for biometric sensing. When adding a user to the device, the sensor will be used to collect information about the user’s fingerprint and it will then be transferred via SPI to the processor for storage. <br/> Similarly, after the device has been configured, when the user goes to withdraw their medication, they will use the sensor to authenticate themselves, and the sensor will collect information about the fingerprint and send it to the processor via SPI for verification.</p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
-        <h2>Tortor dolore feugiat<br />
-        elementum magna</h2>
-        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+        <h2>Door sensor</h2>
+        <p>One crucial element to providing access control is being able to sense whether the lid is open. This information can be used to automatically lock the lid when closed. Reed switches are commonly used to detect when a door or drawer is open, so a reed switch is appropriate here.</p>
       </div>
     </section>
     <section class="spotlight">
@@ -100,44 +140,36 @@
         <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
       </div>
     </section>
-  </section>
-
-<!-- Three -->
-  <section id="three" class="wrapper style3 special">
-    <div class="inner">
-      <header class="major">
-        <h2>Accumsan mus tortor nunc aliquet</h2>
-        <p>Aliquam ut ex ut augue consectetur interdum. Donec amet imperdiet eleifend<br />
-        fringilla tincidunt. Nullam dui leo Aenean mi ligula, rhoncus ullamcorper.</p>
-      </header>
-      <ul class="features">
-        <li class="icon fa-paper-plane-o">
-          <h3>Arcu accumsan</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-        <li class="icon fa-laptop">
-          <h3>Ac Augue Eget</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-        <li class="icon fa-code">
-          <h3>Mus Scelerisque</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-        <li class="icon fa-headphones">
-          <h3>Mauris Imperdiet</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-        <li class="icon fa-heart-o">
-          <h3>Aenean Primis</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-        <li class="icon fa-flag-o">
-          <h3>Tortor Ut</h3>
-          <p>Augue consectetur sed interdum imperdiet et ipsum. Mauris lorem tincidunt nullam amet leo Aenean ligula consequat consequat.</p>
-        </li>
-      </ul>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
+        <h2>Door sensor</h2>
+        <p>One crucial element to providing access control is being able to sense whether the lid is open. This information can be used to automatically lock the lid when closed. Reed switches are commonly used to detect when a door or drawer is open, so a reed switch is appropriate here.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+        <h2>Augue eleifend aliquet<br />
+        sed condimentum</h2>
+        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic02.jpg" alt="" /></div><div class="content">
+        <h2>Door sensor</h2>
+        <p>One crucial element to providing access control is being able to sense whether the lid is open. This information can be used to automatically lock the lid when closed. Reed switches are commonly used to detect when a door or drawer is open, so a reed switch is appropriate here.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/pic03.jpg" alt="" /></div><div class="content">
+        <h2>Augue eleifend aliquet<br />
+        sed condimentum</h2>
+        <p>Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet. Mauris eleifend fringilla nullam aenean mi ligula.</p>
+      </div>
+    </section>
     </div>
   </section>
+
+
 
   <!-- CTA -->
   <section id="cta" class="wrapper style4">
@@ -152,16 +184,6 @@
       </ul>
     </div>
   </section>
-  <h2>About</h2>
-   
-    <p>About content goes here.</p>
-
-<ul>
-  <li>A list item</li>
-  <li>Another list item</li>
-</ul>
-
-
   <!-- Footer -->
 <footer id="footer">
   <ul class="icons">

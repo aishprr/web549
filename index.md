@@ -1,5 +1,6 @@
 ---
 layout: default
+type: test
 ---
 
 Main content goes here. 

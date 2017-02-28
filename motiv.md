@@ -1,0 +1,2 @@
+# Motivation
+From 1999 to 2008, the number of accidental overdoses that have lead to death quadrupled, and drug abusers can easily access prescription painkillers through friends or relatives with legitimate prescriptions. Since prescription drugs are inherently very addictive substances, self-dosing can be very dangerous and can lead to addiction or even death. Our solution is the automate the at-home drug consumption process to reduce the risk of mistaken dosage and unauthorized access to prescription drugs.
