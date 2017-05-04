@@ -24,8 +24,8 @@
       <h2>Requirements and Technical Specifications</h2>
       <ul class="features">
         <li class="icon fa-paper-plane-o">
-          <h3>Portable and Compact</h3>
-          <p>The most important physical component of our project is a container capable of being loaded, storing, and dispensing pills. This container must be compact and portable, and easy to use since the target customers are either the elderly or those possibly suffering from an illness. This portability also allows for us to implement access control, which prevents the user from having access to excess medication, allowing only physicians / pharmacists to load and schedule dosages.</p>
+          <h3>Safe and Compact</h3>
+          <p> A core physical component of our project is having a container capable of loading, storing, and dispensing pills. This container must be compact and easy to use since the target customers are either the elderly or those possibly suffering from an illness. We have also implemented access control, to prevent the user from having access to excess medication, while allowing only physicians / pharmacists to load and schedule dosages.</p>
         </li>
         <li class="icon fa-medkit">
           <h3>Durable and Airtight</h3>
@@ -33,19 +33,19 @@
         </li>
         <li class="icon fa-user-md">
           <h3>Physician Access Control</h3>
-          <p>In order to achieve preventing access to the user to take more than the prescribed medication, we aim to have an access control mechanism that allows only authorized individuals / organizations to load the container with the right pills, and set the schedule. This feature should be easily accessible via a user app, that can identify the device eadily. This user app will also only be distributed to such authorized entities, thereby preventing misuse.</p>
+          <p>In order to achieve preventing access to the user to take more than the prescribed medication, we aim to have an access control mechanism that allows only authorized individuals / organizations to load the container with the right pills, and set the schedule. This feature should be easily accessible via a user app that can identify the device easily, and will only be usable by authorized entities, thereby preventing misuse.</p>
         </li>
         <li class="icon fa-user">
           <h3>User Access Control</h3>
-          <p>Our device also secures the medication from individuals other than the user of the medication. For this, we intend to use biometric access control, which can also be setup using a User app. This app will allow the user to add their biometric markers to the device to restrict access.</p>
+          <p>Our device also secures the medication from individuals other than the user of the medication. For this, we use biometric access control, which can also be setup using a user app. This app will allow the user to add their biometric markers to the device to restrict access.</p>
         </li>
         <li class="icon fa-calendar">
           <h3>Physician Settings and Alerts</h3>
-          <p>Only the physician will be able to set the prescription schedule for the medication on the device. This will be through the same user app as user above. One of the possible extensions to our project is to alert physicians in case medication is missed by the user or if the secure container has been breached.</p>
+          <p>Only the physician will be able to set the prescription schedule for the medication on the device. This will be through the same user app as the user. One of the possible extensions to our project is to alert physicians in case medication is missed by the user or if the secure container has been breached.</p>
         </li>
         <li class="icon fa-bell">
           <h3>User Reminders</h3>
-          <p>The user will be reminded on their phones (paired with the deviece) when it is time for their medication. The device will also keep track of when the medication is nearing exhaustion, and alert the user to refill.</p>
+          <p>The user will be reminded on their phones (paired with the device) when it is time for their medication. The device will also keep track of when the medication is nearing exhaustion, and alert the user to refill.</p>
         </li>
         <!--
         <li class="icon fa-heart-o">
@@ -64,17 +64,25 @@
     <div class="inner">
     <h2><center></br></br>Architecture</center></h2>
     <section class="spotlight">
-      <div class="image"><center><img src="images/arch.jpg" alt="" /></div><div class="content"></center>
-      </div>
+      <center><div class="image"><img src="images/arch.jpg" alt=""/></div><div class="content">
+      </div></center>
+    </section>
+    <section class="spotlight">
+      <center><div class="image"><img src="images/schematic.jpg" alt=""/></div><div class="content">
+      </div></center>
+    </section>
+    <section class="spotlight">
+      <center><div class="image"><img src="images/brd.jpg" alt=""/></div><div class="content">
+      </div></center>
     </section>
     <h2><center></br></br>Interactive Diagram</center></h2>
     <section class="spotlight">
-      <div class="image"><center><img src="images/pharma_img.jpg" alt="" /></div><div class="content"></center>
-      </div>
+      <center><div class="image"><img src="images/pharma_img.jpg" alt="" /></div><div class="content">
+      </div></center>
     </section>
     <section class="spotlight">
-      <div class="image"><center><img src="images/user.jpg" alt="" /></div><div class="content"></center>
-      </div>
+      <center><div class="image"><img src="images/user_1.jpg" alt="" /></div><div class="content">
+      </div></center>
     </section>
     </div>
   </section>
@@ -84,22 +92,22 @@
     <div class="inner">
     <h2><center></br></br>Components</center></h2>
     <section class="spotlight">
-      <div class="image"><img src="images/rpi3.jpg" alt="" /></div><div class="content">
+      <div class="image"><img src="images/rpi0.jpg" alt="" /></div><div class="content">
         <h2>Microcontroller</h2>
-        <p>Our primary motivation when choosing a microcontroller was support for BLE (and possibly Wifi) and other standard communication protocols and an easily accessible development environment. For these reasons, we chose the Raspberry Pi 3 since it comes built in with BLE and 802.11n Wireless Support. </br> <a target="_blank" href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Link</a></p>
+        <p>Our primary motivation when choosing a microcontroller was support for BLE (and possibly Wifi) and other standard communication protocols and an easily accessible development environment. For these reasons, we chose the Raspberry Pi Zero since it comes built in with BLE and 802.11n Wireless Support. </br> <a target="_blank" href="https://www.raspberrypi.org/products/pi-zero/">Link</a></p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/fingerprint.jpg" alt="" /></div><div class="content">
         <h2>Fingerprint sensor</h2>
-        <p>A key component of our product is the authentication step that verifies that the person who is withdrawing the medication is the person for whom it is intended for. <br/> This prevents people from developing an addiction to medication that they should not be taking, as it does not allow them to even use it in the first place. <br/> To do this, we will use a GT-511CR fingerprint sensor for biometric sensing. When adding a user to the device, the sensor will be used to collect information about the user’s fingerprint and it will then be transferred via UART to the processor for storage. <br/> Similarly, after the device has been configured, when the user goes to withdraw their medication, they will use the sensor to authenticate themselves, and the sensor will collect information about the fingerprint and send it to the processor via UART for verification.</p>
+        <p>A key component of our product is the authentication step that verifies that the person who is withdrawing the medication is the person for whom it is intended for. <br/> This prevents people from developing an addiction to medication that they should not be taking, as it does not allow them to even use it in the first place. <br/> To do this, we will use a ZFM-20 fingerprint sensor for biometric sensing. When adding a user to the device, the sensor will be used to collect information about the user’s fingerprint and store it within itself. <br/> Similarly, after the device has been configured, when the user goes to withdraw their medication, they will use the sensor to authenticate themselves, and the sensor will collect information about the fingerprint and send information to the processor via UART about the results of authentication.</p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/solenoid.jpg" alt="" /></div><div class="content">
         <h2>Bolting Solenoid</h2>
         <p>In order to control access to the pills to prevent overdose, we will be using a solenoid that actuates a bolt to act as a locking mechanism. In choosing the solenoid, there is a tradeoff between how strongly the solenoid bolts and the amount of power it consumes. Since we are aiming to create a portable device, we will be operating this solenoid with a battery. The solenoid we chose is at this <a href= "https://www.adafruit.com/products/1512">link</a>. </br>
-        It has a slug that is normally active i.e. the solenoid is locked when unpowered and when powered, the slug is pulled back allowing the door to be opened, making it ideal for this case, since the door is locked most of the time. For safe operation, we will also use a IN4004 diode along with a power transistor (TIP102). This solenoid can be operated at 9V - 12V DC which makes it ideal to be powered with a battery. </p>
+        It has a slug that is normally active i.e. the solenoid is locked when unpowered and when powered, the slug is pulled back allowing the door to be opened, making it ideal for this case, since the door is locked most of the time. For safe operation, we will also use an S1GFSCT-ND diode along with a power transistor (FQP30N06L-ND). This solenoid can be operated at 9V - 12V DC which makes it ideal to be powered with a battery. </p>
       </div>
     </section>
     <section class="spotlight">
@@ -107,19 +115,25 @@
         <h2>Photocell</h2>
         <p>This sensor is present in order to test if a pill has been dispensed successfully by our system. It will also help us test is the user has taken the pill according to schedule, and prevent dispensing more pills if the user has not taken their previously scheduled medication. The pill
         will block light from an LED, which will change the value read by the photocell, allowing us to detect if a pill is present in the dispensing 
-        area. </br><a href= "https://www.sparkfun.com/products/9088">Link</a>.</p>
+        area. </br><a href= "https://www.sparkfun.com/products/9088">Link</a></p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/microservo.jpg" alt="" /></div><div class="content">
         <h2>Servo Motor</h2>
-        <p>The physical pill dispensing mechanism, one of the most important parts of our system, requires a servo motor. We required a motor that was strong enough to twist a loaded dispensing plate, without using a lot of power. The FS90R Microservo was suitable for this purpose. <a href="https://www.pololu.com/product/2820">motor</a></p>
+        <p>he physical pill dispensing mechanism, one of the most important parts of our system, requires a servo motor. We required a motor that was strong enough to twist a loaded dispensing plate, without using a lot of power. The FS90R Microservo was suitable for this purpose. <a href="https://www.pololu.com/product/2820">motor</a></p>
       </div>
     </section>
     <section class="spotlight">
       <div class="image"><img src="images/accelerometer.jpg" alt="" /></div><div class="content">
         <h2>Accelerometer</h2>
-        <p>The dispensing mechanism will only work when the entire device is upright, so we need an accelerometer to measure the orientation of the device. This will ensure that the dispensing mechanism will only work when it is upright. The requirements for the accelerometer was that it is small, low power, and able to sense orientation, so we chose  the 3-Axis MEMS Accelerometer (MMA8452Q). <a href="https://www.pololu.com/product/2820">motor</a></p>
+        <p>The dispensing mechanism will only work when the entire device is upright, so we need an accelerometer to determine the orientation of the device. This will ensure that the dispensing mechanism will only work when it is upright. The requirements for the accelerometer was that it is small, low power, and able to sense orientation, so we chose the <a href="https://www.sparkfun.com/products/10953">3-Axis MEMS Accelerometer (MMA8452Q)</a>, which we interface with over I2C.</p>
+      </div>
+    </section>
+    <section class="spotlight">
+      <div class="image"><img src="images/adc.png" alt="" /></div><div class="content">
+        <h2>Analog to Digital Converter</h2>
+        <p>Since the Raspberry Pi Zero does not have an onboard analog to digital converter(ADC), we must use an external one to be able to read the analog values output by the photocell. We are using the dual-channel <a href="https://www.digikey.com/product-detail/en/microchip-technology/MCP3002-I-SN/MCP3002-I-SN-ND/319413">MCP3002</a> ADC for this, which we interface with over SPI.</p> 
       </div>
     </section>
     </div>

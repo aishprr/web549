@@ -1,5 +1,5 @@
 build: 
-	     jekyll build
+	     ~/bin/jekyll build
 
 
 
