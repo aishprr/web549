@@ -18,5 +18,10 @@
   <script src="{{base}}{{ "/assets/js/util.js" | prepend: site.baseurl }}"></script>
   <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
   <script src="{{base}}{{ "/assets/js/main.js" | prepend: site.baseurl }}"></script>
+  <script>
+  function resizeIframe(obj) {
+    obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+  }
+  </script>
   <link rel="stylesheet" href="{{base}}{{ "/assets/css/main.css" | prepend: site.baseurl }}">
 </head> 
